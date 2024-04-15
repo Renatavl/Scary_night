@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--додаємо viewport бо без нього media не працює-->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css"> <!--додала медіа окремий файл, має знаходитися нижче всіх-->
+    </head>
+  <body id="body">
+  <header>
+    <img src="halloween.png" class="first_photo">
+    <!--<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">--><!--що воно тут робить link має бути в head-->
+    <h1 class="the_name">Scary night</h1>
+    <h2 class="welcome">Welcome our club!</h2>
+    <button type="button" data-type="logo" class="openbtn">Menu</button>
+    <div id="mySidebar" class="sidebar">
+            <img src="logo.gif" class="logo">
+            <a href="#" class="closebtn"onclick="closeNav()">&#10006;</a>
+            <div onclick="location.href = '/index_2.html'" class="breakfast">
+              <p class="b">Breakfast</p>
+              <img src="br.png" class="img_br">
+              </div>
+              <div onclick="location.href = '/index_3.html'" class="lunch">
+              <p class="l">Lunch</p>
+              <img src="l.png" class="img_l">
+              </div>
+              <div onclick="location.href = '/index_4.html'" class="desserts">
+              <p class="d">Desserts</p>
+              <img src="ds.png" class="img_ds">
+              </div>
+              <div onclick="location.href = '/index_5.html'" class="drinks">
+              <p class="r">Drinks</p>
+              <img src="dr.png" class="img_dr">
+              </div>
+ 
+        </div>
+            
+            <div id="main">
+            <button data-type="logo" class="openbtn" onclick="openNav()">Menu</button>
+            </div>
+            <script>
+                function openNav(){
+                  if (window.innerWidth >= 420) {
+                    document.getElementById("mySidebar").style.width = "27%";
+                    document.getElementById("main").style.marginLeft="250";
+                } else {
+                  document.getElementById("mySidebar").style.width = "100%";
+                  document.getElementById("main").style.marginLeft="250";
+                }
+              }
+                function closeNav(){
+                    document.getElementById("mySidebar").style.width = "0px";
+                    document.getElementById("main").style.marginLeft="50px"
+                }
+            </script>
+  </header>
+  <style>
+    /*!
+     * chiefSlider (https://itchief.ru/lessons/php/feedback-form-for-website)
+     * Copyright 2018 Alexander Maltsev
+     * Licensed under MIT (https://github.com/itchief/feedback-form/blob/master/LICENSE)
+     */
+
+    /* стили для элемента body */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      /*height: 3000px;*/ /* для чого обмежувати сайт? */
+    }
+    particle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+    /* стили основного контейнера слайдера */
+    .slider {
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* стили для обёртки, в которой заключены слайды */
+    .slider__wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* стили для контейнера слайдов */
+    .slider__items {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+
+    /* стили для слайдов */
+    .slider__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    /* стили для кнопок "вперед" и "назад" */
+    .slider__control {
+      position: absolute;
+      top: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      color: #fff;
+      text-align: center;
+      opacity: 0.5;
+      height: 50px;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .slider__control_show {
+      display: flex;
+    }
+
+    .slider__control:hover,
+    .slider__control:focus {
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+      opacity: 0.9;
+    }
+
+    .slider__control_prev {
+      left: 0;
+    }
+
+    .slider__control_next {
+      right: 0;
+    }
+
+    .slider__control::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: transparent no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    .slider__control_prev::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+
+    .slider__control_next::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+
+    /* стили для индикаторов */
+    .slider__indicators {
+      display: block;
+      position: center;
+      z-index: 15;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+     
+    }
+
+    .slider__indicators li {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 30px;
+      height: 4px;
+      margin-right: 3px;
+      margin-left: 3px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.5);
+      background-clip: padding-box;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+    }
+
+    .slider__indicators li.active {
+      background-color: #fff;
+    }
+
+    .img-fluid {
+      /* display: inline-block;
+      height: auto;
+      max-width: 100%; */
+      display: block;
+      position: center;
+      z-index: 15;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      width: 100%;
+    height: 100%;
+    object-fit: cover;
+     
+    }
+  </style>
+<!--</head>  що це за head ? -->
+
+  <div class="slider">
+    <div class="slider__wrapper">
+      <div class="slider__items">
+        <div class="slider__item">
+          <img class="img-fluid" src="111111.jpg" alt="c1">
+        </div>
+        <div class="slider__item">
+          <img class="img-fluid" src="111111_copy.jpg" alt="c2">
+        </div>
+        <div class="slider__item">
+          <img class="img-fluid" src="1111113_copy.jpg" alt="c3">
+        </div>
+        <div class="slider__item">
+          <img class="img-fluid" src="1111121_copy.jpg" alt="c4">
+        </div>
+      </div>
+    </div>
+    <a class="slider__control slider__control_prev" href="#" role="button"></a>
+    <a class="slider__control slider__control_next" href="#" role="button"></a>
+  </div>
+
+  <script>
+    'use strict';
+    var slideShow = (function () {
+      return function (selector, config) {
+        var
+          _slider = document.querySelector(selector), // основный элемент блока
+          _sliderContainer = _slider.querySelector('.slider__items'), // контейнер для .slider-item
+          _sliderItems = _slider.querySelectorAll('.slider__item'), // коллекция .slider-item
+          _sliderControls = _slider.querySelectorAll('.slider__control'), // элементы управления
+          _currentPosition = 0, // позиция левого активного элемента
+          _transformValue = 0, // значение транфсофрмации .slider_wrapper
+          _transformStep = 100, // величина шага (для трансформации)
+          _itemsArray = [], // массив элементов
+          _timerId,
+          _indicatorItems,
+          _indicatorIndex = 0,
+          _indicatorIndexMax = _sliderItems.length - 1,
+          _stepTouch = 50,
+          _config = {
+            isAutoplay: false, // автоматическая смена слайдов
+            directionAutoplay: 'next', // направление смены слайдов
+            delayAutoplay: 5000, // интервал между автоматической сменой слайдов
+            isPauseOnHover: true // устанавливать ли паузу при поднесении курсора к слайдеру
+          };
+
+        // настройка конфигурации слайдера в зависимости от полученных ключей
+        for (var key in config) {
+          if (key in _config) {
+            _config[key] = config[key];
+          }
+        }
+
+        // наполнение массива _itemsArray
+        for (var i = 0, length = _sliderItems.length; i < length; i++) {
+          _itemsArray.push({ item: _sliderItems[i], position: i, transform: 0 });
+        }
+
+        // переменная position содержит методы с помощью которой можно получить минимальный и максимальный индекс элемента, а также соответствующему этому индексу позицию
+        var position = {
+          getItemIndex: function (mode) {
+            var index = 0;
+            for (var i = 0, length = _itemsArray.length; i < length; i++) {
+              if ((_itemsArray[i].position < _itemsArray[index].position && mode === 'min') || (_itemsArray[i].position > _itemsArray[index].position && mode === 'max')) {
+                index = i;
+              }
+            }
+            return index;
+          },
+          getItemPosition: function (mode) {
+            return _itemsArray[position.getItemIndex(mode)].position;
+          }
+        };
+
+        // функция, выполняющая смену слайда в указанном направлении
+        var _move = function (direction) {
+          var nextItem, currentIndicator = _indicatorIndex;;
+          if (direction === 'next') {
+            _currentPosition++;
+            if (_currentPosition > position.getItemPosition('max')) {
+              nextItem = position.getItemIndex('min');
+              _itemsArray[nextItem].position = position.getItemPosition('max') + 1;
+              _itemsArray[nextItem].transform += _itemsArray.length * 100;
+              _itemsArray[nextItem].item.style.transform = 'translateX(' + _itemsArray[nextItem].transform + '%)';
+            }
+            _transformValue -= _transformStep;
+            _indicatorIndex = _indicatorIndex + 1;
+            if (_indicatorIndex > _indicatorIndexMax) {
+              _indicatorIndex = 0;
+            }
+          } else {
+            _currentPosition--;
+            if (_currentPosition < position.getItemPosition('min')) {
+              nextItem = position.getItemIndex('max');
+              _itemsArray[nextItem].position = position.getItemPosition('min') - 1;
+              _itemsArray[nextItem].transform -= _itemsArray.length * 100;
+              _itemsArray[nextItem].item.style.transform = 'translateX(' + _itemsArray[nextItem].transform + '%)';
+            }
+            _transformValue += _transformStep;
+            _indicatorIndex = _indicatorIndex - 1;
+            if (_indicatorIndex < 0) {
+              _indicatorIndex = _indicatorIndexMax;
+            }
+          }
+          _sliderContainer.style.transform = 'translateX(' + _transformValue + '%)';
+          _indicatorItems[currentIndicator].classList.remove('active');
+          _indicatorItems[_indicatorIndex].classList.add('active');
+        };
+
+        // функция, осуществляющая переход к слайду по его порядковому номеру
+        var _moveTo = function (index) {
+          var i = 0, direction = (index > _indicatorIndex) ? 'next' : 'prev';
+          while (index !== _indicatorIndex && i <= _indicatorIndexMax) {
+            _move(direction);
+            i++;
+          }
+        };
+
+        // функция для запуска автоматической смены слайдов через промежутки времени
+        var _startAutoplay = function () {
+          if (!_config.isAutoplay) {
+            return;
+          }
+          _stopAutoplay();
+          _timerId = setInterval(function () {
+            _move(_config.directionAutoplay);
+          }, _config.delayAutoplay);
+        };
+
+        // функция, отключающая автоматическую смену слайдов
+        var _stopAutoplay = function () {
+          clearInterval(_timerId);
+        };
+
+        // функция, добавляющая индикаторы к слайдеру
+        var _addIndicators = function () {
+          var indicatorsContainer = document.createElement('ol');
+          indicatorsContainer.classList.add('slider__indicators');
+          for (var i = 0, length = _sliderItems.length; i < length; i++) {
+            var sliderIndicatorsItem = document.createElement('li');
+            if (i === 0) {
+              sliderIndicatorsItem.classList.add('active');
+            }
+            sliderIndicatorsItem.setAttribute("data-slide-to", i);
+            indicatorsContainer.appendChild(sliderIndicatorsItem);
+          }
+          _slider.appendChild(indicatorsContainer);
+          _indicatorItems = _slider.querySelectorAll('.slider__indicators > li')
+        };
+
+        var _isTouchDevice = function () {
+          return !!('ontouchstart' in window || navigator.maxTouchPoints);
+        };
+
+        // функция, осуществляющая установку обработчиков для событий 
+        var _setUpListeners = function () {
+          var _startX = 0;
+          if (_isTouchDevice()) {
+            _slider.addEventListener('touchstart', function (e) {
+              _startX = e.changedTouches[0].clientX;
+              _startAutoplay();
+            });
+            _slider.addEventListener('touchend', function (e) {
+              var
+                _endX = e.changedTouches[0].clientX,
+                _deltaX = _endX - _startX;
+              if (_deltaX > _stepTouch) {
+                _move('prev');
+              } else if (_deltaX < -_stepTouch) {
+                _move('next');
+              }
+              _startAutoplay();
+            });
+          } else {
+            for (var i = 0, length = _sliderControls.length; i < length; i++) {
+              _sliderControls[i].classList.add('slider__control_show');
+            }
+          }
+          _slider.addEventListener('click', function (e) {
+            if (e.target.classList.contains('slider__control')) {
+              e.preventDefault();
+              _move(e.target.classList.contains('slider__control_next') ? 'next' : 'prev');
+              _startAutoplay();
+            } else if (e.target.getAttribute('data-slide-to')) {
+              e.preventDefault();
+              _moveTo(parseInt(e.target.getAttribute('data-slide-to')));
+              _startAutoplay();
+            }
+          });
+          document.addEventListener('visibilitychange', function () {
+            if (document.visibilityState === "hidden") {
+              _stopAutoplay();
+            } else {
+              _startAutoplay();
+            }
+          }, false);
+          if (_config.isPauseOnHover && _config.isAutoplay) {
+            _slider.addEventListener('mouseenter', function () {
+              _stopAutoplay();
+            });
+            _slider.addEventListener('mouseleave', function () {
+              _startAutoplay();
+            });
+          }
+        };
+
+        // добавляем индикаторы к слайдеру
+        _addIndicators();
+        // установливаем обработчики для событий
+        _setUpListeners();
+        // запускаем автоматическую смену слайдов, если установлен соответствующий ключ
+        _startAutoplay();
+
+        return {
+          // метод слайдера для перехода к следующему слайду
+          next: function () {
+            _move('next');
+          },
+          // метод слайдера для перехода к предыдущему слайду          
+          left: function () {
+            _move('prev');
+          },
+          // метод отключающий автоматическую смену слайдов
+          stop: function () {
+            _config.isAutoplay = false;
+            _stopAutoplay();
+          },
+          // метод запускающий автоматическую смену слайдов
+          cycle: function () {
+            _config.isAutoplay = true;
+            _startAutoplay();
+          }
+        }
+      }
+    }());
+
+    slideShow('.slider', {
+      isAutoplay: true
+    });
+  </script>
+
+    <div class="grid-container">
+    <img src = "pumpkin.jpg" class="pumpkin">
+    <h3 class="first_title">Halloween traditions</h3>
+    <p class="first_text">Modern Halloween has nothing to do with evil spirits. This is a fun and funny holiday - a great excuse to throw a costume party and decorate the gray everyday life. And adherence to traditions will only add magic to the holiday.</p>
+    <a href='https://www.history.com/topics/halloween/history-of-halloween' target="_blank" class="button">Learn more</a>
+    <img src = "table.jpg" class="table">
+    <img src = "table_2.jpg" class="table_2">
+    <span class="dot"></span>
+    <svg height="120" width="120" class="circle">
+    <circle cx="60" cy="60" r="50" stroke="rgb(219, 219, 219)" stroke-width="20" fill="none" />
+    </svg>
+    <div class="party"></div>
+    <h2 class="second_title">We'll make your party</h2>  
+    <span style='font-size:60px;' class="check_mark">&#10003;</span>
+    <h3 class="third_title">Your party will be terribly interesting!</h3>
+    <!-- <p class="second_text"></p> -->
+    <span style='font-size:60px;' class="check_mark2">&#10003;</span>
+    <h3 class="fourth_title">An unforgettable experience</h3>
+    <!-- <p class="third_text"></p> -->
+    <span style='font-size:60px;' class="check_mark3">&#10003;</span>
+    <h3 class="fifth_title">A wide range of dishes and cocktails.</h3>
+    <!-- <p class="fourth_text"></p> -->
+    <span style='font-size:60px;' class="check_mark4">&#10003;</span>
+    <h3 class="sixth_title">Cool discos</h3>
+    <!-- <p class="fifth_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p> -->
+    <span style='font-size:60px;' class="check_mark5">&#10003;</span>
+    <h3 class="seventh_title">Сonstant quests</h3>
+    <!-- <p class="sixth_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p> -->
+    <span style='font-size:60px;' class="check_mark6">&#10003;</span>
+    <h3 class="eighth_title">Open 24/7</h3>
+    <!-- <p class="seventh_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p> -->
+    </div>
+      
+    <div class="grid-container_2">
+    <div class="about_us"></div>
+    <div class="yellow_block"></div>
+    <img src="party.jpg" class="img_party">
+    <img src="people.jpg" class="img_people">
+    <h1 class="text">About us</h1>
+    <h1 class="f_title">Discos every day</h1>
+    <p class="m_text">If you want to spend your Halloween in winter, spring or summer this is not a problem! We have Halloween every day!</p>
+    <p class="s_text">Come in a Halloween costume and break the dance floor. Сompete for the best look and get prizes!</p>
+    <a href='https://www.spirithalloween.com/' target="_blank" class="btn2">Learn more</a>
+    <h1 class="s_title">Our menu is terribly delicious</h1>
+    <p class="t_text">Choose and taste</p>
+    <a href='https://www.allrecipes.com/recipes/189/holidays-and-events/halloween/' target="_blank" class="btn3">Learn more</a>
+    <img src="snack.jpg" class="snack">
+    <img src="candy_mix.jpg" class="mix">
+    <span class="dot_2"></span>
+    <svg height="120" width="120" class="circle_2">
+    <circle cx="60" cy="60" r="40" stroke="rgb(219, 219, 219)" stroke-width="20" fill="none" />
+    </svg>
+    </div>
+    
+    <div class="grid-container_3">
+    <div class="light_grey_block"></div>
+    <div class="yellow_block_2"></div>
+    <img src="sweets.jpg" class="sweets">
+    <h1 class="t_title">What is Halloween?</h1>
+    <p class="f_text">Halloween is a popular American holiday for children and adults. It is celebrated on October 31st every year. Children dress up in costumes and  go after dark  house to house, knock on the door and say  trick or treat! People then give the children "treats" like candy. Costumes can be scary.</p>
+    <a href='https://en.wikipedia.org/wiki/Halloween' target="_blank" class="btn4">Read more</a>
+    <div class="dark_grey_block"></div>
+    <img src="sweets_2.jpg" class="sweets_2">    
+    <div class="dark_grey_block_2"></div>
+    <h1 class="e_title">How to celebrate it?</h1>
+    <p class="e_text">Many Americans celebrate the traditions of Halloween by dressing in costumes and telling tales of witches and ghosts. Pumpkins are carved into glowering jack-o'-lanterns. Children parade from house to house, knocking on doors and calling out "Trick or treat!" hoping to have their bags filled with candy.</p>
+    <img src="pasta.jpg" class="pasta">
+    <img src="scary_pumpkin.jpg" class="scary_pumpkin">
+    <div class="white_block"></div>
+    <h1 class="n_title">Halloween mood</h1>
+    <p class="n_text">Light some candles, brew that pumpkin spice coffee or tea, bundle up in comfy clothes and get in the mood. Wear black or witch inspired outfits, or even walk around your house wearing cat ears. I used to work at a costume store, and it was the only job where I could wear my costume 30 days before Halloween and it was so much fun! I got to play with fake blood, vampire teeth, and check out new costumes before they hit the stores yet – which definitely help me get in the mood for Halloween. So don’t be afraid to dress up a bit before the big day! </p>
+    <a href='https://www.thewonderforest.com/8-ways-get-spooky-mood-halloween/' target="_blank" class="btn5">Read more</a>
+    </div>
+
+
+<footer>
+    <div class="container">
+        <div class="form_group" id="form_group">
+            <form action="/form2.php" method="POST">
+                <input type="text" id="fname" name="firstname" placeholder="Enter your name...">
+                <hr>
+                <input type="text" id="lname" name="lastname" placeholder="Enter your e-mail adress...">
+                <hr>
+                <textarea id="subject" name="subject" placeholder="Enter your message..." style="height:200px"></textarea>
+                <button type="submit" class="btn6">Submit</button>
+            </form>  
+            <div class="form_info">
+                <h1>Contact us</h1>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js.js"></script>
+</body>
+</html>

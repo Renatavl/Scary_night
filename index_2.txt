@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_2.css">
+</head>
+<body>
+    <img src ="logo.gif" class="breakfasts">
+    <h1 class="bt">Our breakfasts</h1>
+    <div class="row">
+    <div class="column">
+    <img src="porridge.jpg" class="img">
+    <h1 class="pe">Awful porridge</h1>
+    <button type="button" class="btn7">Order</button>
+    <h3 class="rp">$1.70</h3>  
+    </div>
+    <div class="column">
+    <img src="sausages.jpg" class="img">
+    <h1 class="ss">Spooky sausage mummies</h1>
+    <h3 class="sp">$3</h3> 
+    <button type="button" class="btn8">Order</button> 
+    </div>
+    <div class="column">
+    <img src="fruit_salad.jpg" class="img">
+    <h1 class="fd">Hair-rising fruit salad</h1>
+    <h3 class="fp">$4</h3> 
+    <button type="button" class="btn9">Order</button> 
+    </div>
+    </div>
+
+    <div class="row_2">
+    <div class="column_2">
+    <img src="toasts.jpg" class="img_2">
+    <h1 class="ts">Disgusting toasts</h1>
+    <h3 class="tp">$1.40</h3>  
+    <button type="button" class="btn10">Order</button> 
+    </div>
+    <div class="column_2">
+    <img src="monsters.jpg" class="img_2">
+    <h1 class="ms">Spooky rice monsters</h1>
+    <h3 class="mp">$1</h3>  
+    <button type="button" class="btn11">Order</button>  
+    </div>
+    <div class="column_2">
+    <img src="waffles.jpg" class="img_2">
+    <h1 class="ws">Unusual waffles</h1>
+    <h3 class="wp">$1.40</h3>  
+    <button type="button" class="btn12">Order</button>   
+    </div>  
+
+    </div> 
+    
+   
+</body>
+</html>

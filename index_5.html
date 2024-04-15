@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_5.css">
+    <script src="skroll.js" type="text/javascript"></script>
+</head>
+<body>
+    <label for="check_menu">
+        <div id="menu_burger">
+            <input type="checkbox" id="check_menu">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+    </label>
+
+    <div id="menu">
+
+        <li class="item_back burger">
+            <a class="link" href="index.html">Next</a>
+        </li>
+
+        <li class="item_main burger">
+           <a class="link" onclick="history.back();return false;">go back</a>
+        </li>
+
+        <li class="item2 burger">
+           <a class="link" href="index_2.html">Breakfast</a>
+        </li>
+
+        <li class="item3 burger">
+           <a class="link" href="index_3.html">Lunch</a>
+        </li>
+        <li class="item4 burger">
+           <a class="link" href="index_4.html">Desserts</a>
+        </li>
+
+    </div>
+    <img src ="logo.gif" class="drinks header">
+    <h1 class="rt anim1">Our drinks</h1>
+    <div class="row_5">
+    <div class="column">
+    <img src="juice.jpg" class="img_5 anim7">
+    <h1 class="title_7">Frightful juice</h1>  
+    <h3 class="price_7">$0.55</h3>  
+    <button type="button" class="btn_7 btn">Order</button>
+    </div>
+    <div class="column">
+    <img src="coffee.jpg" class="img_5 anim7">
+    <h1 class="title_7">Fearful coffee</h1>
+    <h3 class="price_7">$0.9</h3> 
+    <button type="button" class="btn_7 btn">Order</button> 
+    </div>
+    <div class="column">
+    <img src="cocktails.jpg" class="img_5 anim7">
+    <h1 class="title_7">Nightmarish cocktails</h1>
+    <h3 class="price_7">$2.90</h3> 
+    <button type="button" class="btn_7 btn">Order</button> 
+    </div>
+    <div class="row_6">
+    <div class="column_6">
+    <img src="milkshake.jpg" class="img_6 anim7">
+    <h1 class="title_8">Creepy milkshake</h1>
+    <h3 class="price_8">$1.25</h3>  
+    <button type="button" class="btn_8 btn">Order</button> 
+    </div>
+    <div class="column_6">
+    <img src="bloody_cocktail.jpg" class="img_6 anim7">
+    <h1 class="title_8">Bloodcurdling cocktails</h1>
+    <h3 class="price_8">$3</h3>  
+    <button type="button" class="btn_8 btn">Order</button>  
+    </div>
+    <div class="column_6">
+    <img src="vampire_martini.jpg" class="img_6 anim7">
+    <h1 class="title_8">Vampire martini</h1>
+    <h3 class="price_8">$3.60</h3>  
+    <button type="button" class="btn_8 btn">Order</button>   
+    </div>    
+
+</div>
+
+<div class="form_group" id="form_group">
+    <form action="/form.php" method="POST">
+        <img src="http://s1.iconbird.com/ico/1012/Qetto2Icons/w256h2561350657651missedcalls.png" class="close">
+        <input type="text" id="fname" name="firstname" placeholder="Enter your name...">
+        <hr>
+        <input type="text" id="lname" name="lastname" placeholder="Enter your e-mail adress...">
+        <hr>
+        <textarea id="subject" name="subject" placeholder="Enter your message..." style="height:200px"></textarea>
+        <button type="submit" class="btn6">Submit</button>
+    </form>  
+</div>
+
+<script src="js2_5.js"></script>
+
+</body>
+</html>

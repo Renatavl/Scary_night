@@ -1,0 +1,288 @@
+body{
+    background-color: white;
+}
+
+* {
+	margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+#menu_burger {
+  display: none;
+}
+
+.line {
+  position: absolute;
+  left: 2%;
+  background: rgb(237, 174, 0);
+  width: 100px;
+  height: 25px;
+  transition: 0.5s;
+  border-radius: 25px;
+}
+
+.line1 {
+  top: 3%;
+}
+
+.line2 {
+  top: 8%;
+}
+
+.line3 {
+  top: 13%;
+}
+
+.burger {
+  position: absolute;
+  background: rgb(237, 174, 0);
+  width: 115px;
+  height: 30px;
+  border-radius: 25px;
+}
+
+.item_back {
+  position: absolute;
+  top: 6%;
+}
+
+.item_main {
+  position: absolute;
+    top: 0%;
+}
+
+.item2 {
+  position: absolute;
+    top: 0%;
+    left: 145px;
+}
+
+.item3 {
+  position: absolute;
+    top: 6%;
+    left: 145px;
+}
+
+.item4 {
+  position: absolute;
+    top: 12%;
+    left: 145px;
+}
+
+.link{
+  color: white;
+  text-transform: uppercase;
+  margin-left: 12%;
+}
+
+.img_5{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0 5%;
+    height: 360px;
+}
+
+.drinks{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: -4%;
+}
+
+.rt{
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-size: 250%;
+    margin-top: -3%;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    height: 564px;
+  }
+  
+  /* Clearfix (clear floats) */
+.row_5::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.price_7{
+    color:red;
+    text-align: center;
+    font-size: x-large;
+    margin-top: 2%;
+    font-weight: 800;
+} 
+
+.title_7{
+    color: black;
+    padding: 0 5%;
+    text-align: center;
+}
+
+.btn_7{
+    background-color: rgb(237, 174, 0);
+    color: black;
+    width: 100px;
+    height: 30px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 25px;
+    /*margin-left: 42.5%;*/
+    margin-top: 1.3%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  } 
+
+.column_6 {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    height: 564px;
+  }
+  
+.row_6::after {
+    content: "";
+    clear: both;
+    display: table;
+  }   
+
+.img_6{
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    padding: 0 5%;
+    /*margin-top: 30%;*/
+}       
+
+.title_8{
+    color: black;
+    padding: 0 5%;
+    text-align: center;
+}
+
+.price_8{
+    color:red;
+    text-align: center;
+    font-size: x-large;
+    margin-top: 2%;
+    font-weight: 800;
+} 
+
+.btn_8{
+    background-color: rgb(237, 174, 0);
+    color: black;
+    width: 100px;
+    height: 30px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 25px;
+    /*margin-left: 42.5%;*/
+    margin-top: 1.3%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }     
+
+  .form_group {
+    width: 86%;
+    margin: 0 auto;
+  }
+  form {
+    width: 50%;
+    background: white;
+    margin: 0 AUTO;
+  }
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #000;
+    resize: vertical;
+}
+  #form_group {
+    display:none;
+    z-index:20;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    left: 0;
+    padding-top: 120px;
+  }
+  .close {
+    color: rgb(0, 0, 0);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    width: 10%;
+}
+
+.close:hover
+{
+    color: #000;
+    cursor: pointer;
+}
+.btn6 {
+  background-color: rgb(237, 174, 0);
+  color: black;
+  width: 100px;
+  height: 30px;
+  text-transform: uppercase;
+  border: none;
+}
+#menu_burger {
+  display: block;
+  cursor: pointer;
+}
+#check_menu {
+display: none;
+}
+#menu {
+  display: none;
+}
+#check_menu:checked~.line1 {
+  transform: rotate(45deg);
+  top: 18px;
+  transition: 0.5s;
+}
+#check_menu:checked~.line2 {
+  display: none;
+}
+#check_menu:checked~.line3 {
+  transform: rotate(-45deg);
+  top: 18px;
+  transition: 0.5s;
+}
+@media (max-width: 940px) {
+  .column {
+    width: 100%;
+  }
+  .column_6 {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  #menu {
+    width: 0px;
+    height: 73%;
+    position: absolute;
+    display: none;
+  }
+  
+  }

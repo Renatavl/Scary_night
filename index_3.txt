@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_3.css">
+</head>
+<body>
+    <img src ="logo.gif" class="lunches">
+    <h1 class="le">Our lunches</h1>
+    <div class="row">
+    <div class="column_7">
+    <img src="pizza.jpg" class="img_3">
+    <h1 class="pa">Crazy pizza</h1>
+    <button type="button" class="btn25">Order</button>
+    <h3 class="ip">$7.2</h3>  
+    </div>
+    <div class="column_7">
+    <img src="burger.jpg" class="img_3">
+    <h1 class="br">Chilling burgers</h1>
+    <h3 class="bp">$1.08</h3> 
+    <button type="button" class="btn26">Order</button> 
+    </div>
+    <div class="column_7">
+    <img src="sushi.jpg" class="img_3">
+    <h1 class="ui">Wild sushi</h1>
+    <h3 class="up">$3.6</h3> 
+    <button type="button" class="btn27">Order</button> 
+    </div>
+    </div>
+    <div class="row_8">
+    <div class="column_8">
+    <img src="vegetable_salad.jpg" class="img_4">
+    <h1 class="ed">Supernatural salad</h1>
+    <h3 class="ep">$2.50</h3>  
+    <button type="button" class="btn28">Order</button> 
+    </div>
+    <div class="column_8">
+    <img src="soup.jpg" class="img_4">
+    <h1 class="sp">Eyeball soup</h1>
+    <h3 class="soup">$1</h3>  
+    <button type="button" class="btn29">Order</button>  
+    </div>
+    <div class="column_8">
+    <img src="meat_potato.jpg" class="img_4">
+    <h1 class="mpo">Meat with potato</h1>
+    <h3 class="mp">$3.6</h3>  
+    <button type="button" class="btn30">Order</button>   
+    </div>  
+    
+    </div> 
+        
+</body>
+</html>

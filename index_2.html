@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_2.css">
+    <script src="skroll.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <label for="check_menu">
+        <div id="menu_burger">
+            <input type="checkbox" id="check_menu">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+    </label>
+
+    <div id="menu">
+
+        <li class="item_back burger">
+            <a class="link" href="index_3.html">Next</a>
+        </li>
+
+        <li class="item_main burger">
+           <a class="link" onclick="history.back();return false;">go back</a>
+        </li>
+
+        <li class="item2 burger">
+           <a class="link" href="index_3.html">Lunch</a>
+        </li>
+
+        <li class="item3 burger">
+           <a class="link" href="index_4.html">Desserts</a>
+        </li>
+        <li class="item4 burger">
+           <a class="link" href="index_5.html">Drinks</a>
+        </li>
+
+    </div>
+
+    <img src ="logo.gif" class="breakfasts header">
+    <h1 class="bt anim1">Our breakfasts</h1>
+    <div class="row">
+    <div class="column">
+    <img src="porridge.jpg" class="img anim7">
+    <h1 class="title">Awful porridge</h1>
+    <p class="price">$1.70</p>  
+    <button type="button" class="btn">Order</button>
+    </div>
+    <div class="column">
+    <img src="sausages.jpg" class="img anim7">
+    <h1 class="title">Spooky sausage mummies</h1>
+    <p class="price">$3</p> 
+    <button type="button" class="btn">Order</button> 
+    </div>
+    <div class="column">
+    <img src="fruit_salad.jpg" class="img anim7">
+    <h1 class="title">Hair-rising fruit salad</h1>
+    <p class="price">$4</p> 
+    <button type="button" class="btn">Order</button> 
+    </div>
+    </div>
+
+    <div class="row_2">
+    <div class="column_2">
+    <img src="toasts.jpg" class="img_2 anim7">
+    <h1 class="title_2">Disgusting toasts</h1>
+    <h3 class="price_2">$1.40</h3>  
+    <button type="button" class="btn_2 btn">Order</button> 
+    </div>
+    <div class="column_2">
+    <img src="monsters.jpg" class="img_2 anim7">
+    <h1 class="title_2">Spooky rice monsters</h1>
+    <h3 class="price_2">$1</h3>  
+    <button type="button" class="btn_2 btn">Order</button>  
+    </div>
+    <div class="column_2">
+    <img src="waffles.jpg" class="img_2 anim7">
+    <h1 class="title_2">Unusual waffles</h1>
+    <h3 class="price_2">$1.40</h3>  
+    <button type="button" class="btn_2 btn">Order</button>   
+    </div>  
+
+    </div> 
+
+    <div class="form_group" id="form_group">
+        <form action="/form.php" method="POST">
+            <img src="http://s1.iconbird.com/ico/1012/Qetto2Icons/w256h2561350657651missedcalls.png" class="close">
+            <input type="text" id="fname" name="firstname" placeholder="Enter your name...">
+            <hr>
+            <input type="text" id="lname" name="lastname" placeholder="Enter your e-mail adress...">
+            <hr>
+            <textarea id="subject" name="subject" placeholder="Enter your message..." style="height:200px"></textarea>
+            <button type="submit" class="btn6">Submit</button>
+        </form>  
+    </div>
+
+   <script src="js2_5.js"></script>
+</body>
+</html>

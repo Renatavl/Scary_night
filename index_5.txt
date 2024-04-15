@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_5.css">
+</head>
+<body>
+    <img src ="logo.gif" class="drinks">
+    <h1 class="rt">Our drinks</h1>
+    <div class="row_5">
+    <div class="column">
+    <img src="juice.jpg" class="img_5">
+    <h1 class="je">Frightful juice</h1>   
+    <button type="button" class="btn19">Order</button>
+    <h3 class="jp">$0.55</h3> 
+    </div>
+    <div class="column">
+    <img src="coffee.jpg" class="img_5">
+    <h1 class="oe">Fearful coffee</h1>
+    <h3 class="op">$0.9</h3> 
+    <button type="button" class="btn20">Order</button> 
+    </div>
+    <div class="column">
+    <img src="cocktails.jpg" class="img_5">
+    <h1 class="ks">Nightmarish cocktails</h1>
+    <h3 class="kp">$2.90</h3> 
+    <button type="button" class="btn21">Order</button> 
+    </div>
+    <div class="row_6">
+    <div class="column_6">
+    <img src="milkshake.jpg" class="img_6">
+    <h1 class="he">Creepy milkshake</h1>
+    <h3 class="hp">$1.25</h3>  
+    <button type="button" class="btn22">Order</button> 
+    </div>
+    <div class="column_6">
+    <img src="bloody_cocktail.jpg" class="img_6">
+    <h1 class="bl">Bloodcurdling cocktails</h1>
+    <h3 class="bp">$3</h3>  
+    <button type="button" class="btn23">Order</button>  
+    </div>
+    <div class="column_6">
+    <img src="vampire_martini.jpg" class="img_6">
+    <h1 class="vi">Vampire martini</h1>
+    <h3 class="vp">$3.60</h3>  
+    <button type="button" class="btn24">Order</button>   
+    </div>    
+
+</div>
+
+</body>
+</html>

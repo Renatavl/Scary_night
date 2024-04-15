@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_4.css">
+</head>
+<body>
+    <img src ="logo.gif" class="desserts">
+    <h1 class="dt">Our desserts</h1>
+    <div class="row_3">
+    <div class="column">
+    <img src="cake.jpg" class="img_3">
+    <h1 class="ce">Eye cake</h1>   
+    <button type="button" class="btn13">Order</button>
+    <h3 class="cp">$7.15</h3> 
+    </div>
+    <div class="column">
+    <img src="cake_roll.jpg" class="img_3">
+    <h1 class="cr">Frightening roll cake</h1>
+    <h3 class="ap">$6</h3> 
+    <button type="button" class="btn14">Order</button> 
+    </div>
+    <div class="column">
+    <img src="lollipops.jpg" class="img_3">
+    <h1 class="ls">Strange lollipops</h1>
+    <h3 class="lp">$0.7</h3> 
+    <button type="button" class="btn15">Order</button> 
+    </div>
+
+    <div class="row_4">
+    <div class="column_4">
+    <img src="ice-cream.png" class="img_4">
+    <h1 class="im">Nasty ice-cream</h1>
+    <h3 class="ip">$1</h3>  
+    <button type="button" class="btn16">Order</button> 
+    </div>
+    <div class="column_4">
+    <img src="cupcakes.jpg" class="img_4">
+    <h1 class="cs">Terrible cupcakes</h1>
+    <h3 class="up">$2.15</h3>  
+    <button type="button" class="btn17">Order</button>  
+    </div>
+    <div class="column_4">
+    <img src="donuts.jpg" class="img_4">
+    <h1 class="ds">Bizarre donuts</h1>
+    <h3 class="dp">$2.85</h3>  
+    <button type="button" class="btn18">Order</button>   
+    </div>      
+</div>
+</body>
+</html>
